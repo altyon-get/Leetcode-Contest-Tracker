@@ -6,7 +6,7 @@ Contest Tracker - LeetCode is a Chrome extension designed for participants who w
 
 To install the Contest Tracker - LeetCode Chrome extension, follow these steps:
 
-1. Download the source code from the [GitHub repository]https://github.com/altyon-get/Leetcode-CT
+1. Download the source code from the https://github.com/altyon-get/Leetcode-CT
 2. Open the Chrome browser and enter "chrome://extensions" in the address bar.
 3. Enable Developer Mode by toggling the switch in the top right corner of the extensions page.
 4. Click on the "Load Unpacked" button and select the downloaded source code folder.
