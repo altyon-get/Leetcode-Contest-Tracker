@@ -16,7 +16,7 @@ To install the Contest Tracker - LeetCode Chrome extension, follow these steps:
 - Green tick mark: Indicates problems solved during the main contest.
 - Orange tick mark: Indicates problems solved after the contest.
 - Cross: Indicates unsolved problems.
-- Clicking on the extension icon directly opens the corresponding problem. 
+- Clicking on the icon directly opens the corresponding problem. 
 
 ## Suggestions and Feedback
 
