@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Contest Tracker: Leetcode",
+  "version": "0.0.4",
+  "description": "Leetcode Contest Performance Tracker",
+  "icons": {
+    "128": "icon1.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "action": {
+    "default_icon": "icon1.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
