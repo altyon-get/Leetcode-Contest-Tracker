@@ -22,6 +22,8 @@ To install the Contest Tracker - LeetCode Chrome extension, follow these steps:
 
 I greatly appreciate any suggestions or feedback you may have for improving the extension. 
 
+## Screenshots
+
 ![Screenshot (48)](https://github.com/altyon-get/Leetcode-Contest-Tracker/assets/73048959/725aab82-15e7-4b2c-8fc3-e77695ff610d)
 
 ![Screenshot 2023-06-06 162941](https://github.com/altyon-get/Leetcode-Contest-Tracker/assets/73048959/850b546d-82d5-4b21-9510-86004505e37c)
