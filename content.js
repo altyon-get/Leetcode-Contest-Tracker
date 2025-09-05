@@ -38,6 +38,39 @@ pathElement2.setAttribute("stroke", "white");
 pathElement2.setAttribute("stroke-width", "2");
 svgElement2.appendChild(pathElement2);
 
+function createDifficultyBadge(difficultyLevel) {
+    const badge = document.createElement("div");
+
+    let text, colorClass1,colorClass2 ;
+    switch(difficultyLevel) {
+        case 1:
+            text = "E";
+            colorClass1 = "text-difficulty-easy";
+            colorClass2 = "dark:text-difficulty-easy";
+            break;
+        case 2:
+            text = "M";
+            colorClass1 = "text-difficulty-medium"; 
+            colorClass2 = "dark:text-difficulty-medium";
+            break;
+        case 3:
+            text = "H";
+            colorClass1 = "text-difficulty-hard"; 
+            colorClass2 = "dark:text-difficulty-hard";
+            break;
+        default:
+            text = "";
+            colorClass1 = "text-gray-500";
+    }
+    
+    badge.classList.add(colorClass1);
+    badge.classList.add(colorClass2);
+    badge.textContent = text;
+    badge.style.fontSize = "0.50rem";
+    badge.style.marginTop = "1px";
+    
+    return badge;
+}
 
 
 
@@ -78,11 +111,23 @@ async function displayData(userSolved, userContestData) {
                         else {
                             newSvg = svgElement2.cloneNode(true);
                         }
+                        
+                        // Create container for icon and badge
+                        const container = document.createElement("div");
+                        container.style.display = "flex";
+                        container.style.flexDirection = "column";
+                        container.style.alignItems = "center";
+                        container.style.gap = "2px";
+                        const difficultyBadge = createDifficultyBadge(difficultyLevel);
+                        
                         const linkElement = document.createElement("a");
                         linkElement.appendChild(newSvg);
                         linkElement.setAttribute("href", link);
                         linkElement.setAttribute("target", '_blank');
-                        fragment.appendChild(linkElement);
+                        
+                        container.appendChild(linkElement);
+                        container.appendChild(difficultyBadge);
+                        fragment.appendChild(container);
                     });
 
                     secondDiv.appendChild(fragment);
