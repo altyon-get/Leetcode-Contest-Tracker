@@ -100,6 +100,7 @@ async function displayData(userSolved, userContestData) {
                         const id = question.question_id;
                         const title = question.title_slug;
                         const link = `https://leetcode.com/contest/${contestName}/problems/${title}/`;
+                        const difficultyLevel = question.difficulty || 1;
                         let newSvg;
                         if (contestSolved.has(id)) {
                             newSvg = svgElement1.cloneNode(true);
