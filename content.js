@@ -2,6 +2,12 @@
 const contestDataCache = {};
 let userSolvedCache = null;
 
+//choose icon color based on theme
+const htmlElement = document.documentElement;
+const colorScheme = htmlElement.style.colorScheme || window.getComputedStyle(htmlElement).colorScheme;
+const iconColor = colorScheme === 'dark' ? 'white' : 'black';
+
+
 //icon1
 const svgElement1 = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 svgElement1.setAttribute("xmlns", "http://www.w3.org/2000/svg");
@@ -28,13 +34,13 @@ circleElement.setAttribute("cx", viewBoxWidth / 2);
 circleElement.setAttribute("cy", viewBoxWidth / 2);
 circleElement.setAttribute("r", circleRadius);
 circleElement.setAttribute("fill", "transparent");
-circleElement.setAttribute("stroke", "white");
+circleElement.setAttribute("stroke", iconColor);
 circleElement.setAttribute("stroke-width", "2");
 svgElement2.appendChild(circleElement);
 const pathElement2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
 pathElement2.setAttribute("fill-rule", "evenodd");
 pathElement2.setAttribute("d", "M7.05,7.05 L16.95,16.95 M7.05,16.95 L16.95,7.05");
-pathElement2.setAttribute("stroke", "white");
+pathElement2.setAttribute("stroke", iconColor);
 pathElement2.setAttribute("stroke-width", "2");
 svgElement2.appendChild(pathElement2);
 
